@@ -1,7 +1,7 @@
 ----------------------------------------------
 -- Window Management
 ----------------------------------------------
-hs.hotkey.bind({"cmd", "shift"}, "F", function()
+hs.hotkey.bind({"cmd","alt","ctrl"}, "F", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -14,7 +14,7 @@ hs.hotkey.bind({"cmd", "shift"}, "F", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "shift"}, "Left", function()
+hs.hotkey.bind({"cmd","alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -27,7 +27,7 @@ hs.hotkey.bind({"cmd", "shift"}, "Left", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "shift"}, "Right", function()
+hs.hotkey.bind({"cmd","alt","ctrl"}, "Right", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -40,7 +40,7 @@ hs.hotkey.bind({"cmd", "shift"}, "Right", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "shift"}, "Up", function()
+hs.hotkey.bind({"cmd","alt", "ctrl"}, "Up", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -52,7 +52,7 @@ hs.hotkey.bind({"cmd", "shift"}, "Up", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "shift"}, "Down", function()
+hs.hotkey.bind({"cmd","alt","ctrl"}, "Down", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -102,4 +102,4 @@ function mouseHighlight()
     -- Set a timer to delete the circle after 3 seconds
     mouseCircleTimer = hs.timer.doAfter(3, function() mouseCircle:delete() end)
 end
-hs.hotkey.bind({"cmd","shift"}, "M", mouseHighlight)
+hs.hotkey.bind({"alt","shift"}, "M", mouseHighlight)
